@@ -21,7 +21,6 @@ export default function Home() {
           Welcome to the Container app
         </h1>
 
-          <p>Catalog Component from the Child App</p>
           <CatalogComponent />
       </main>
 
