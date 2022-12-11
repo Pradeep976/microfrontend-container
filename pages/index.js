@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import dynamic from "next/dynamic";
 
-const CatalogComponent = dynamic(() => import('child/catalog'));
+const CatalogComponent = dynamic(() => import('child/catalog'), { ssr: true });
 
 export default function Home() {
   return (
