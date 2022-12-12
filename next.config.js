@@ -9,12 +9,30 @@ const nextConfig = {
             new NextFederationPlugin({
                 name: 'container',
                 remotes: {
-                    child: `child@https://microfrontend-child.vercel.app/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    child: `child@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
                 },
                 filename: 'static/chunks/remoteEntry.js',
                 exposes: {
                     './footer': './components/Footer.js',
                     './nav': './components/Nav.js'
+                },
+                shared: {
+                    "@emotion/react": {
+                        singleton: true,
+                        requiredVersion: false
+                    },
+                    "@emotion/styled": {
+                        singleton: true,
+                        requiredVersion: false
+                    },
+                    "@mui/icons-material": {
+                        singleton: true,
+                        requiredVersion: false
+                    },
+                    "@mui/material": {
+                        singleton: true,
+                        requiredVersion: false
+                    }
                 }
             })
         );

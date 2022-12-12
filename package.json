@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next build && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@module-federation/nextjs-mf": "^5.12.9",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",
