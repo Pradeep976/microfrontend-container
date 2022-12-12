@@ -16,11 +16,21 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+  html {}
+  body {}
+}
+
+.list-item-container {
+  padding-top: 20px;
+}
+
+.list-item-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiListItemIcon-root {
+  min-width: 0 !important;
 }
